@@ -1,0 +1,207 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Navbar styles */
+
+li {
+    list-style-type: none;
+} 
+
+a {
+    text-decoration: none;
+}
+
+/* Navbar styles */
+
+.topnav {
+    border-bottom: 1px solid #030bff;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    padding: 3px 3px;
+}
+
+/* Design for hamburg */
+
+.hamburger-list {
+    display: none;
+}
+
+.ham-list {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: #101010;
+}
+
+/* Navbar menu */
+
+.nav-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-item {
+    margin-left: 1.5px;
+}
+
+.nav-list{
+    font-size: 15px;
+    font-weight: bold;
+    color: #475569;
+    padding-right: 22px;
+}
+
+.nav-list:hover {
+    color: #030bff;
+}
+
+.logo-item {
+    font-size: 20px;
+    font-weight: bolder;
+    color: #030bff;
+}
+
+/* Media query for making website responsive */
+
+@media only screen and (max-width: 768px) {
+    .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 2px;
+        flex-direction: column;
+        background-color: white;
+        width: 100%;
+        border-radius: 10px;
+        text-align: center;
+        transition: 0.4s;
+        box-shadow:  0 10px 27px rgba(0, 0, 0, 0.05);;
+    }
+    .nav-menu.active {
+        left: 0;
+    }
+    .nav-item {
+        margin: 2px 0;
+    }
+    .hamburger-list{
+        display: block;
+        cursor: pointer;
+    }
+    .hamburger-list.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger-list.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger-list.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+}
+
+/* Calculator UI styles */
+section {
+    background-image:linear-gradient(to right, #2b2e2e, #b6bfbe);
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+.container {
+    width: 100%;
+    max-width: 400px;
+    background-color: #9baba9;
+    overflow: hidden;
+    border-radius: 10px;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+.screen {
+    background-color: aliceblue;
+    height: 100px;
+    width: 100%;
+    text-align: right;
+    padding-top: 20px;
+    padding-right: 5px;
+    font-size: 30px;
+    position: relative;
+}
+
+.screen1 {
+    opacity: .5;
+    font-size: 20px;
+}
+
+.temp-screen {
+    position: absolute;
+    font-size: 20px;
+    opacity: .5;
+    bottom: 3px;
+}
+
+.all_buttons {
+    background-color: #dce6e4;
+    display: grid;
+    grid-template: repeat(4, 1fr) / repeat(4, 1fr);
+}
+#red-btn:hover {
+    background-color: red;
+}
+
+#warning-btn:hover {
+    background-color: orange;
+}
+
+#green-btn:hover {
+    background-color: #49ba45;
+}
+
+.button {
+    border: 1px solid white;
+    height: 90px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: #4d5251;
+}
+
+.lg-button {
+    grid-column: 1/3;
+}
+
+/* footer design */
+
+.footer1 {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: black;
+    color: white;
+    text-align: center;
+  
+}
